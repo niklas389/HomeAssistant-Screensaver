@@ -16,7 +16,7 @@ function updateTime() {
 
 function setBG() {
   var h = new Date().getHours();
-  var ds = h > 8 && h < 16;
+  var ds = h > 6 && h < 20;
   if (ds) 
   { 
     // store.style.setProperty('--clock-bg', '#ffffff9a');
