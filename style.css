@@ -7,14 +7,13 @@
 .clock-minutes:before {
   content: var(--timer-minutes);
 }
-.hass_temp_indoor::before{
-  /* content: var(--hass-temp-indoor); */
-  content: var(--timer-minutes);
+/* .hass_temp_indoor::before{
+  content: var(--hass-temp-indoor);
 }
 .hass_temp_outdoor::before{
-  /* content: var(--hass-temp-indoor); */
-  content: var(--timer-hours);
-}
+  content: var(--hass-temp-indoor);
+} */
+
 :root.night {
   --font-color: #ffffffe2;
   --clock-bg: #00000080;
@@ -143,5 +142,30 @@ body {
   /* display: flex; */
   align-items: center;
   /* justify-content: center; */
+}
 
+.now_playing {
+  color: var(--font-color);
+  position: absolute;
+  margin-top: 0px;
+  border-radius: 10px;
+  border-top-left-radius: 0px;
+  border-top-right-radius: 0px;
+  padding: 12px;
+  top: 0;
+  /* left: 0; */
+  align-items: center;
+  font-size: 2rem;
+  /* width: 90%; */
+  /* box-shadow: none; */
+  border-top: none;
+  /* visibility: hidden; */
+  text-transform: uppercase;
+}
+
+.now_playing_artist {
+  opacity: 0.65;
+  margin-left: -10px;
+  margin-top: 10px;
+  font-size: 1.2rem;
 }
