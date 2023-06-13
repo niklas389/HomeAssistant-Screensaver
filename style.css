@@ -7,7 +7,14 @@
 .clock-minutes:before {
   content: var(--timer-minutes);
 }
-
+.hass_temp_indoor::before{
+  /* content: var(--hass-temp-indoor); */
+  content: var(--timer-minutes);
+}
+.hass_temp_outdoor::before{
+  /* content: var(--hass-temp-indoor); */
+  content: var(--timer-hours);
+}
 :root.night {
   --font-color: #ffffffe2;
   --clock-bg: #00000080;
@@ -16,12 +23,6 @@
 :root.day {
   --font-color: #0000009a;
   --clock-bg: #ffffff9a;
-}
-
-
-
-.clock-container {
-  background-color: var(--clock-bg)!important;
 }
 
 body {
@@ -40,7 +41,7 @@ body {
 .clock-container {
   margin-top: 30px;
   margin-bottom: 30px;
-  background-color: var(--clock-bg);
+  background-color: var(--clock-bg)!important;
   backdrop-filter: blur(8px);
   border-radius: 20px;
   padding: 60px 20px;
@@ -60,9 +61,9 @@ body {
   content: "•";
   font-size: 2rem;
   color: var(--font-color);
-  /* height: 5px;
+  height: 5px;
   width: 5px;
-  border-radius: 100%; */
+  border-radius: 100%;
   display: block;
   position: absolute;
   right: -42px;
@@ -77,7 +78,8 @@ body {
 }
 .clock-timer:before {
   color: var(--font-color);
-  font-size: 7.5rem;
+  /* font-size: 7.5rem; */
+  font-size: 8.5rem;
   text-transform: uppercase;
 }
 .clock-label {
@@ -103,31 +105,43 @@ body {
   }
 }
 
-#temp_icon {
-  font-size: 26px; 
-  position: relative;
-  top: 4px;
-  margin-right: -3px;
+#mat_icon {
+  font-size: 30px; 
+  /* position: relative; */
+  /* top: 4px; */
+  margin-right: 5px;
   /* display: inline-block; */
-
 }
 
 .hass_info_col {
-  position: relative;
+  margin-right: 15px;
+  /* top: 5px; */
+}
+
+.hass_info_unit {
+  margin-left: -15px;
+  margin-right: 10px;
+  opacity: 0.65;
+  /* margin-top: -4px;
+  font-size: 1.2rem; */
 }
 
 .hass_info {
   color: var(--font-color);
-  background-color: var(--clock-bg);
-  border-radius: 20px;
-  backdrop-filter: blur(8px);
+  /* background-color: var(--clock-bg); */
+  /* border-radius: 20px; */
+  /* backdrop-filter: blur(8px); */
+  position: absolute;
+  left: 0px;
+  bottom: 0px;
   margin-left: 40px;
   margin-bottom: 40px;
-  min-width: 90px;
-  padding: 8px;
-  padding-bottom: 12px;
-  position: absolute;
-  bottom: 0px;
-  left: 0px;
-  font-size: 1.2rem;
+  /* min-width: 90px; */
+  padding: 12px;
+  /* padding-bottom: 12px; */
+  font-size: 2rem;
+  /* display: flex; */
+  align-items: center;
+  /* justify-content: center; */
+
 }

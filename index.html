@@ -5,12 +5,13 @@
   <title>Kiosk-Mode-Screensaver</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
   <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Montserrat:400,700'>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"> <!-- Material Icons -->
+  <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"> Material Icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
   <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-<!-- partial:index.partial.html -->
-<div class="clock-container">
+
+  <div class="clock-container">
 
   <div class="clock-col">
     <p class="clock-day clock-timer">
@@ -36,39 +37,27 @@
   </div>
 </div>
 
+<!-- HomeAssistant InfoBox -->
+<div class="hass_info clock-container">
 
-<div class="hass_info">
-
-  <div class="hass_info_col">
-
-    <p class="hass_temp_indoor">
-  <span  id="temp_icon" class="material-icons">thermostat</span>          
-  XX.X °C
-    </p>
-    <!-- <p class="hass_info_value">
-      <span class="hass_info_temp"></span> °C
-    </p> -->
+  <!-- <span id="mat_icon" class="material-icons">thermostat</span> -->
+  <span id="mat_icon" class="material-symbols-outlined">device_thermostat</span>
+  <div class="hass_info_col">  
+    <p class="hass_temp_indoor"></p>
   </div>
+  <p class="hass_info_unit">°C</p>  
 
-
-  <!-- <div class="hass_info_col">
-    <p class="hass_info_label">
-      Luftfeuchtigkeit
-    </p>
-    <p class="hass_info_value">
-      <span class="hass_info_hum"></span> %
-    </p>
+  <!-- <span id="mat_icon" class="material-icons">cast</span> -->
+  <span id="mat_icon" class="material-symbols-outlined">partly_cloudy_day</span>
+  <div class="hass_info_col">  
+    <p class="hass_temp_outdoor"></p>
   </div>
-  <div class="hass_info_col">
-    <p class="hass_info_label">
-      Luftdruck
-    </p>
-    <p class="hass_info_value">
-      <span class="hass_info_press"></span> hPa
-    </p>
-  </div> -->
+  <p class="hass_info_unit">°C</p>  
 </div>
+
+
 <!-- partial -->
-  <script src='https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.15.2/moment.min.js'></script><script  src="./script.js"></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.15.2/moment.min.js'></script>
+  <script src="./script.js"></script>
 </body>
 </html>
