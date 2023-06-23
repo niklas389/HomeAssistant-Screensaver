@@ -15,13 +15,15 @@
 } */
 
 :root.night {
-  --font-color: #ffffffe2;
+  /* --font-color: #ffffffe2; */
+  --font-color: #ffffffbe;
   --clock-bg: #00000080;
+  --bg-dim: #00000098;
 }
-
 :root.day {
   --font-color: #0000009a;
   --clock-bg: #ffffff9a;
+  --bg-dim: #0000002f;
 }
 
 body {
@@ -37,14 +39,26 @@ body {
   justify-content: center;
 }
 
+.bg_img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--bg-dim);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
 .clock-container {
   margin-top: 30px;
   margin-bottom: 30px;
-  background-color: var(--clock-bg)!important;
-  backdrop-filter: blur(8px);
+  background-color: var(--clock-bg) !important;
+  backdrop-filter: blur(12px);
   border-radius: 20px;
   padding: 60px 20px;
-  box-shadow: 1px 1px 5px rgba(255, 255, 255, 0.1), 0 15px 90px 30px rgba(0, 0, 0, 0.25);
+  box-shadow: 1px 1px 5px rgba(255, 255, 255, 0.1),
+    0 15px 90px 30px rgba(0, 0, 0, 0.25);
   display: flex;
   border: 1.6px solid #ffffff21;
 }
@@ -56,7 +70,8 @@ body {
   min-width: 90px;
   position: relative;
 }
-.clock-col:not(:last-child):before, .clock-col:not(:last-child):after {
+.clock-col:not(:last-child):before,
+.clock-col:not(:last-child):after {
   content: "•";
   font-size: 2rem;
   color: var(--font-color);
@@ -99,13 +114,14 @@ body {
   .clock-col + .clock-col {
     margin-top: 20px;
   }
-  .clock-col:before, .clock-col:after {
+  .clock-col:before,
+  .clock-col:after {
     display: none !important;
   }
 }
 
 #mat_icon {
-  font-size: 30px; 
+  font-size: 30px;
   /* position: relative; */
   /* top: 4px; */
   margin-right: 5px;
@@ -142,6 +158,7 @@ body {
   /* display: flex; */
   align-items: center;
   /* justify-content: center; */
+  visibility: hidden;
 }
 
 .now_playing {
@@ -159,8 +176,8 @@ body {
   /* width: 90%; */
   /* box-shadow: none; */
   border-top: none;
-  /* visibility: hidden; */
   text-transform: uppercase;
+  visibility: hidden;
 }
 
 .now_playing_artist {
