@@ -21,9 +21,9 @@
   --bg-dim: #00000098;
 }
 :root.day {
-  --font-color: #0000009a !important;
-  --clock-bg: #ffffff9a !important;
-  --bg-dim: #0000002f !important;
+  --font-color: #0000009a;
+  --clock-bg: #ffffff9a;
+  --bg-dim: #0000002f;
 }
 
 body {
@@ -45,7 +45,7 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: var(--bg-dim);
+  background-color: var(--bg-dim, inherit);
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -53,7 +53,7 @@ body {
 .clock-container {
   margin-top: 30px;
   margin-bottom: 30px;
-  background-color: var(--clock-bg);
+  background-color: var(--clock-bg, inherit);
   backdrop-filter: blur(12px);
   border-radius: 20px;
   padding: 60px 20px;
@@ -63,7 +63,7 @@ body {
   border: 1.6px solid #ffffff21;
 }
 .clock-col {
-  color: var(--font-color);
+  color: var(--font-color, inherit);
   text-align: center;
   margin-right: 40px;
   margin-left: 40px;
@@ -74,7 +74,7 @@ body {
 .clock-col:not(:last-child):after {
   content: "•";
   font-size: 2rem;
-  color: var(--font-color);
+  color: var(--font-color, inherit);
   height: 5px;
   width: 5px;
   border-radius: 100%;
@@ -91,13 +91,13 @@ body {
   top: 50%;
 }
 .clock-timer:before {
-  color: var(--font-color);
+  color: var(--font-color, inherit);
   /* font-size: 7.5rem; */
   font-size: 8.5rem;
   text-transform: uppercase;
 }
 .clock-label {
-  color: var(--font-color);
+  color: var(--font-color, inherit);
   text-transform: uppercase;
   font-size: 1rem;
   margin-top: 10px;
