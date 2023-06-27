@@ -21,9 +21,9 @@
   --bg-dim: #00000098;
 }
 :root.day {
-  --font-color: #0000009a;
-  --clock-bg: #ffffff9a;
-  --bg-dim: #0000002f;
+  --font-color: #0000009a !important;
+  --clock-bg: #ffffff9a !important;
+  --bg-dim: #0000002f !important;
 }
 
 body {
@@ -53,7 +53,7 @@ body {
 .clock-container {
   margin-top: 30px;
   margin-bottom: 30px;
-  background-color: var(--clock-bg) !important;
+  background-color: var(--clock-bg);
   backdrop-filter: blur(12px);
   border-radius: 20px;
   padding: 60px 20px;
