@@ -14,7 +14,7 @@
   content: var(--hass-temp-indoor);
 } */
 
-/* :root.night {
+:root.night {
   --font-color: #ffffffe2;
   --font-color: #ffffffbe;
   --clock-bg: #00000080;
@@ -24,13 +24,6 @@
   --font-color: #0000009a;
   --clock-bg: #ffffff9a;
   --bg-dim: #0000002f;
-} */
-
-:root {
-  --font-color: hsla(0, 0%, 100%, 0.886);
-  --font-color: #ffffffbe;
-  --clock-bg: #00000080;
-  --bg-dim: #00000098;
 }
 
 body {
