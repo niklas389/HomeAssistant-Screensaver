@@ -29,16 +29,16 @@ function setBG() {
   if (ds) {
     // store.style.setProperty('--clock-bg', '#ffffff9a');
     // store.style.setProperty('--font-color', '#0000009a');
-    document.documentElement.classList.add("day");
-    document.documentElement.classList.remove("night");
+    // document.documentElement.classList.add("day");
+    // document.documentElement.classList.remove("night");
     document.body.background =
       "https://source.unsplash.com/featured/1920x1200/?travel";
     console.log("STYLE: DAY");
   } else {
     // store.style.setProperty('--clock-bg', '#0000009a');
     // store.style.setProperty('--font-color', '#ffffffe2');
-    document.documentElement.classList.add("night");
-    document.documentElement.classList.remove("day");
+    // document.documentElement.classList.add("night");
+    // document.documentElement.classList.remove("day");
     // document.body.background = "https://source.unsplash.com/random/1920x1200/?night,darkness";
     document.body.background =
       "https://source.unsplash.com/collection/91668484/1920x1200/";
