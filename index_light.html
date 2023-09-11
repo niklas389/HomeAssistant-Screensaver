@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="de" >
+<head>
+  <meta charset="UTF-8" name="viewport" content="width=device-width">
+  <title>Kiosk-Mode-Screensaver</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+  <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Montserrat:400,700'>
+  <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"> Material Icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+  <link rel="stylesheet" href="./style_light.css">
+</head>
+
+<body>
+
+  <div class="bg_img"></div>
+
+  <div class="clock-container">
+
+  <div class="clock-col">
+    <p class="clock-day clock-timer">
+    </p>
+    <p class="clock-label">
+      Tag
+    </p>
+  </div>
+
+  <div class="clock-col">
+    <p class="clock-hours clock-timer">
+    </p>
+    <p class="clock-label">
+      Stunde
+    </p>
+  </div>
+  <div class="clock-col">
+    <p class="clock-minutes clock-timer">
+    </p>
+    <p class="clock-label">
+      Minute
+    </p>
+  </div>
+</div>
+
+<!-- HomeAssistant InfoBox -->
+<div class="hass_info clock-container">
+
+  <!-- <span id="mat_icon" class="material-icons">thermostat</span> -->
+  <span id="mat_icon" class="material-symbols-outlined">device_thermostat</span>
+  <div class="hass_info_col">  
+    <p id="temp_indoor" class="hass_temp_indoor">19.6</p>
+  </div>
+  <p class="hass_info_unit">°C</p>  
+
+  <!-- <span id="mat_icon" class="material-icons">cast</span> -->
+  <span id="mat_icon" class="material-symbols-outlined">partly_cloudy_day</span>
+  <div class="hass_info_col">  
+    <p class="hass_temp_outdoor">24.3</p>
+  </div>
+  <p class="hass_info_unit">°C</p>  
+</div>
+
+<!-- HomeAssistant Now Playing -->
+<div class="now_playing clock-container">
+  <span id="mat_icon" class="material-symbols-outlined">music_note</span>
+  <div class="hass_info_col">  
+    <p class="now_playing_title">Revolution</p>
+  </div>
+  <p class="now_playing_artist">Alle Farben</p>
+</div>
+
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.15.2/moment.min.js'></script>
+  <script src="./script.js"></script>
+</body>
+</html>
